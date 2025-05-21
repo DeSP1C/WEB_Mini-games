@@ -1,0 +1,184 @@
+:root {
+    --color-primary: #00eaff;
+    --color-secondary: #ff00ff;
+    --color-bg-primary: #1a1a40;
+    --color-bg-secondary: #2a2a60;
+    --color-black: #000;
+    --color-white: #fff;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+#game.view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--color-bg-primary);
+    padding: 20px;
+    border-radius: 15px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 340px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.game-board {
+    display: grid;
+    grid-gap: 2px;
+    background: var(--color-bg-secondary);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 
+        0 0 10px var(--color-primary),
+        inset 0 0 20px rgba(0, 234, 255, 0.3);
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    background: var(--color-bg-primary);
+    border: 2px solid var(--color-bg-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cell:hover {
+    background: var(--color-bg-secondary);
+    box-shadow: 0 0 5px var(--color-primary);
+}
+
+.cell.revealed {
+    background: var(--color-bg-secondary);
+}
+
+.cell.mine {
+    background: #ff0000;
+    box-shadow: 0 0 10px #ff0000;
+}
+
+.cell.flag {
+    color: var(--color-secondary);
+    text-shadow: 0 0 5px var(--color-secondary);
+}
+
+.like-button {
+    margin-left: 20px;
+}
+
+.like-btn {
+    background: var(--color-bg-primary);
+    border: 3px solid var(--color-primary);
+    border-radius: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.like-btn:hover {
+    background: var(--color-bg-secondary);
+    box-shadow: 
+        0 0 10px var(--color-primary),
+        0 0 20px var(--color-primary);
+}
+
+.like-btn.active {
+    background: var(--color-secondary);
+    border-color: var(--color-secondary);
+    box-shadow: 
+        0 0 10px var(--color-secondary),
+        0 0 20px var(--color-secondary);
+}
+
+.heart-icon {
+    color: var(--color-white);
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.like-btn.active .heart-icon {
+    color: var(--color-white);
+    text-shadow: 
+        0 0 5px var(--color-white),
+        0 0 10px var(--color-white);
+}
+
+.winner-message {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(26, 26, 64, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 24px;
+    text-align: center;
+    display: none;
+    animation: neonPulse 1.5s infinite;
+    color: var(--color-primary);
+    text-shadow: 
+        0 0 5px var(--color-primary),
+        0 0 10px var(--color-primary);
+}
+
+@keyframes neonPulse {
+    0% {
+        filter: drop-shadow(0 0 2px currentColor)
+               drop-shadow(0 0 4px currentColor);
+    }
+    50% {
+        filter: drop-shadow(0 0 3px currentColor)
+               drop-shadow(0 0 6px currentColor)
+               drop-shadow(0 0 9px currentColor);
+    }
+    100% {
+        filter: drop-shadow(0 0 2px currentColor)
+               drop-shadow(0 0 4px currentColor);
+    }
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.restart-btn {
+    background: var(--color-bg-primary);
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    color: var(--color-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.restart-btn:hover {
+    background: var(--color-bg-secondary);
+    box-shadow: 
+        0 0 10px var(--color-primary),
+        0 0 20px var(--color-primary);
+    transform: rotate(180deg);
+}
