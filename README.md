@@ -4,4 +4,4 @@
 ### Мета: ознайомитись із засобами мови Javascript та навчитись їх застосовувати побудови Web-інтерфейсу користувача.
 ### Загальне завдання: розробити функціональність для статичних сторінок Web-додатку першої лабораторної роботи із використанням шаблону MVC
 ### Інструменти розробки: мови HTML5, CSS3, Javascript.
-[URL (посилання) на документ звіту на Google Drive](https://docs.google.com/document/d/1gOrtAKAAyVJWFlFitrjElKcoW5SkmOpQ-ZhY1C_Upcg/edit?usp=sharing)
+[URL (посилання) на документ звіту на Google Drive](https://docs.google.com/document/d/1kveGhIumdS4azuwqKRu7pD_yMb8dmNiGYQsSRH7_ZtI/edit?usp=sharing)
